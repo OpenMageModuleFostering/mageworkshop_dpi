@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<layout version="0.1.0">
+<layout version="1.0.2">
 
     <dpi_attribute_index>
          <block type="dpi/productInfo" name="root" template="dpi/data.phtml"/>

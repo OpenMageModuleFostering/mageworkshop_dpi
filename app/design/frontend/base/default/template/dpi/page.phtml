@@ -1,6 +1,6 @@
-<?php if (($attributes = $this->getAttributesList()) && $this->helper('dpi')->getStoreConfig(DV_DPI_Helper_Data::XML_PATH_ENABLED)):?>
+<?php if (($attributes = $this->getAttributesList()) && $this->helper('dpi')->getStoreConfig(MageWorkshop_DPI_Helper_Data::XML_PATH_ENABLED)):?>
 <div class="box-collateral box-attribute">
-    <button id='page' class="button <?php if($this->helper('dpi')->getStoreConfig(DV_DPI_Helper_Data::XML_PATH_USE_MODAL)): echo 'dpi-modal'; else: echo 'dpi-toggle'; endif; ?>"  title="<?php echo $this->__("Detailed Info"); ?>">
+    <button id='page' class="button <?php if($this->helper('dpi')->getStoreConfig(MageWorkshop_DPI_Helper_Data::XML_PATH_USE_MODAL)): echo 'dpi-modal'; else: echo 'dpi-toggle'; endif; ?>"  title="<?php echo $this->__("Detailed Info"); ?>">
         <span><span><?php echo $this->__("Detailed Info"); ?></span></span>
     </button>
 </div>

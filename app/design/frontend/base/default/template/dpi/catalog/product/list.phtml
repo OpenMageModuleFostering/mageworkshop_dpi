@@ -127,7 +127,7 @@ $_helper = $this->helper('catalog/output');
             <?php echo $this->getToolbarHtml() ?>
         </div>
     </div>
-    <?php if($this->helper('dpi')->getStoreConfig(DV_DPI_Helper_Data::XML_PATH_USE_AJAX)): ?>
+    <?php if($this->helper('dpi')->getStoreConfig(MageWorkshop_DPI_Helper_Data::XML_PATH_USE_AJAX)): ?>
     <div id="loading-mask" style="display:none">
         <p class="loader" id="loading_mask_loader"><img src="<?php echo $this->getSkinUrl('images/dpi/ajax-loader-tr.gif') ?>" alt="<?php echo Mage::helper('adminhtml')->__('Loading...') ?>"/><br/><?php echo Mage::helper('adminhtml')->__('Please wait...') ?></p>
     </div>

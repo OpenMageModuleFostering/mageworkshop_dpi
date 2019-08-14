@@ -1,11 +1,11 @@
 <?php $productId = $this->getProduct()->getId(); ?>
-<?php $useAjax = $this->helper('dpi')->getStoreConfig(DV_DPI_Helper_Data::XML_PATH_USE_AJAX); ?>
-<?php $useModal = $this->helper('dpi')->getStoreConfig(DV_DPI_Helper_Data::XML_PATH_USE_MODAL); ?>
+<?php $useAjax = $this->helper('dpi')->getStoreConfig(MageWorkshop_DPI_Helper_Data::XML_PATH_USE_AJAX); ?>
+<?php $useModal = $this->helper('dpi')->getStoreConfig(MageWorkshop_DPI_Helper_Data::XML_PATH_USE_MODAL); ?>
 <?php $storeId = Mage::app()->getStore()->getId(); ?>
-<?php if(($attributes = $this->getAttributesList($productId)) && $this->helper('dpi')->getStoreConfig(DV_DPI_Helper_Data::XML_PATH_ENABLED)):?>
+<?php if(($attributes = $this->getAttributesList($productId)) && $this->helper('dpi')->getStoreConfig(MageWorkshop_DPI_Helper_Data::XML_PATH_ENABLED)):?>
     <li>
         <span class="separator">|</span>
-        <a id="<?php echo 'attr-'.$productId; ?>" class="show-attribute link-compare <?php if($useModal): echo 'dpi-modal" '; else: echo 'dpi-toggle" '; endif; ?> onclick="return false;"  href="<?php echo $this->getUrl('dpi/attribute/index?id='.$productId.'&ajax='.$useAjax.'&modal='.$useModal.'&store='.$storeId); ?>" title="<?php echo $this->__("Detailed Info");?>"><?php echo $this->__("Detailed Info");?></a>
+        <a id="<?php echo 'attr-'.$productId; ?>" class="show-attribute link-compare <?php if($useModal): echo 'dpi-modal '; else: echo 'dpi-toggle '; endif; ?>" onclick="return false;"  href="<?php echo $this->getUrl('dpi/attribute/index?id='.$productId.'&ajax='.$useAjax.'&modal='.$useModal.'&store='.$storeId); ?>" title="<?php echo $this->__("Detailed Info");?>"><?php echo $this->__("Detailed Info");?></a>
     </li>
     <?php if(!$useAjax):?>
         <ul class="attr-wrapper">
