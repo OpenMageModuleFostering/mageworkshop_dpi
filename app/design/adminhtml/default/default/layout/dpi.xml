@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <dpi_settings_index>
+        <reference name="content">
+            <block type="dpi/adminhtml_attributeSets" name="dpi.loadAttributeSets"/>
+        </reference>
+    </dpi_settings_index>
+
+    <dpi_settings_loadattributesetgrid>
+        <block type="adminhtml/text_list" name="root" output="toHtml">
+            <block type="dpi/adminhtml_attributeSets_grid" name="dpi.attributeSetsGrid"/>
+        </block>
+    </dpi_settings_loadattributesetgrid>
+
+    <dpi_settings_loadattribute>
+        <reference name="content">
+            <block type="adminhtml/store_switcher" name="store_switcher" as="store_switcher">
+                <action method="setUseConfirm">
+                    <params>0</params>
+                </action>
+            </block>
+            <block type="dpi/adminhtml_attributes" name="dpi.loadAttribute"/>
+            <block type="adminhtml/template" name="additional_js" template="dpi/additional.phtml"/>
+        </reference>
+    </dpi_settings_loadattribute>
+
+    <dpi_settings_loadattributegrid>
+        <block type="adminhtml/text_list" name="root" output="toHtml">
+            <block type="dpi/adminhtml_attributes_grid" name="dpi.attributeGrid">
+                <block type="adminhtml/template" name="additional_js" template="dpi/additional.phtml"/>
+            </block>
+        </block>
+    </dpi_settings_loadattributegrid>
+
+    <dpi_settings_savesettings>
+        <update handle="dpi_settings_loadattributegrid"/>
+    </dpi_settings_savesettings>
+
+</layout>

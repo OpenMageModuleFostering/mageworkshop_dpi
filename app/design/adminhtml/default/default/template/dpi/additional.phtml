@@ -1,0 +1,12 @@
+<script type="text/javascript">
+    $$('.attr-select').invoke("observe","click",function(){
+        $$('.selected-values').each(function(item){
+            item.checked = "checked";
+        });
+    });
+    $$('.attr-unselect').invoke("observe","click",function(){
+        $$('.selected-values').each(function(item){
+            item.checked = "";
+        });
+    });
+</script>

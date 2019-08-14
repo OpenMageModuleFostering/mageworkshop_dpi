@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/MageWorkshop_DPI",
+    "type": "magento-module",
+    "license": "GPL",
+    "homepage": "",
+    "description": " This extension displays attribute values of the product on Product Page and various product lists (Category Page, Tagged Products, Search and Advanced search).",
+    "authors": [
+    {
+        "name": "Mage_Workshop",
+        "email": "mageworkshophq@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

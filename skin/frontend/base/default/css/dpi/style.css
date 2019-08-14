@@ -1,0 +1,33 @@
+.attr-table {position: absolute; width: 500px; z-index: 30;}
+.attr-wrapper {position: relative; z-index: 50;}
+.data-table th {padding: 3px 8px !important;}
+.data-table td {padding: 3px 8px !important;}
+.dpi-attributes {padding-bottom: 10px;}
+.products-grid .actions {bottom: 5px;}
+#loading-mask {
+    background:background:url(../images/dpi/blank.gif) repeat;
+    position:absolute;
+    color:#d85909;
+    font-size:1.1em;
+    font-weight:bold;
+    text-align:center;
+    opacity:0.80;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; /* IE8 */
+    filter: alpha(opacity=80); /* ie lt 7 */
+    z-index:1000;
+}
+#loading-mask .loader {
+    position:fixed;
+    top:45%;
+    left:50%;
+    width:150px;
+    margin-left:-105px;
+    padding:15px 30px;
+    background:#fff4e9;
+    border:2px solid #f1af73;
+    color:#d85909;
+    font-weight:bold;
+    text-align:center;
+    z-index:1000;
+}
+

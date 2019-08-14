@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+    <dpi_attribute_index>
+         <block type="dpi/productInfo" name="root" template="dpi/data.phtml"/>
+    </dpi_attribute_index>
+
+    <catalog_product_view>
+        <reference name="head">
+            <action method="addJs" ifconfig="dpi/general/enabled"><script>prototype/window.js</script></action>
+            <action method="addJs" ifconfig="dpi/general/enabled"><script>dpi/page.js</script></action>
+            <action method="addItem" ifconfig="dpi/general/enabled"><type>js_css</type><name>prototype/windows/themes/default.css</name></action>
+            <action method="addCss" ifconfig="dpi/general/enabled"><name>lib/prototype/windows/themes/magento.css</name></action>
+            <action method="addCss" ifconfig="dpi/general/enabled"><name>css/dpi/style.css</name></action>
+        </reference>
+        <reference name="product.info.additional">
+            <block type="dpi/productInfo" name="dpi.productInfo" before="product_tag_list">
+                <action method="setTemplate" ifconfig="dpi/general/product_page">
+                    <template>dpi/page.phtml</template>
+                </action>
+             </block>
+        </reference>
+    </catalog_product_view>
+
+    <catalog_category_default>
+        <reference name="head">
+            <action method="addJs" ifconfig="dpi/general/enabled"><script>prototype/window.js</script></action>
+            <action method="addItem" ifconfig="dpi/general/enabled"><type>js_css</type><name>prototype/windows/themes/default.css</name></action>
+            <action method="addCss" ifconfig="dpi/general/enabled"><name>lib/prototype/windows/themes/magento.css</name></action>
+            <action method="addJs" ifconfig="dpi/general/enabled"><script>dpi/list.js</script></action>
+            <action method="addCss" ifconfig="dpi/general/enabled"><name>css/dpi/style.css</name></action>
+        </reference>
+        <reference name="product_list">
+            <action method="setTemplate" ifconfig="dpi/general/template_override">
+                <template>dpi/catalog/product/list.phtml</template>
+            </action>
+            <block type="dpi/productInfo" name="dpi.productInfo">
+                <action method="setTemplate" ifconfig="dpi/general/product_list">
+                    <template>dpi/list.phtml</template>
+                </action>
+            </block>
+        </reference>
+    </catalog_category_default>
+
+    <catalog_category_layered>
+        <reference name="head">
+            <action method="addJs" ifconfig="dpi/general/enabled"><script>prototype/window.js</script></action>
+            <action method="addItem" ifconfig="dpi/general/enabled"><type>js_css</type><name>prototype/windows/themes/default.css</name></action>
+            <action method="addCss" ifconfig="dpi/general/enabled"><name>lib/prototype/windows/themes/magento.css</name></action>
+            <action method="addJs" ifconfig="dpi/general/enabled"><script>dpi/list.js</script></action>
+            <action method="addCss" ifconfig="dpi/general/enabled"><name>css/dpi/style.css</name></action>
+        </reference>
+        <reference name="product_list">
+            <action method="setTemplate" ifconfig="dpi/general/template_override">
+                <template>dpi/catalog/product/list.phtml</template>
+            </action>
+            <block type="dpi/productInfo" name="dpi.productInfo">
+                <action method="setTemplate" ifconfig="dpi/general/product_list">
+                    <template>dpi/list.phtml</template>
+                </action>
+            </block>
+        </reference>
+    </catalog_category_layered>
+
+    <catalogsearch_advanced_index>
+        <reference name="head">
+            <action method="addJs" ifconfig="dpi/general/enabled"><script>prototype/window.js</script></action>
+            <action method="addItem" ifconfig="dpi/general/enabled"><type>js_css</type><name>prototype/windows/themes/default.css</name></action>
+            <action method="addCss" ifconfig="dpi/general/enabled"><name>lib/prototype/windows/themes/magento.css</name></action>
+            <action method="addJs" ifconfig="dpi/general/enabled"><script>dpi/list.js</script></action>
+            <action method="addCss" ifconfig="dpi/general/enabled"><name>css/dpi/style.css</name></action>
+        </reference>
+        <reference name="search_result_list">
+            <action method="setTemplate" ifconfig="dpi/general/template_override">
+                <template>dpi/catalog/product/list.phtml</template>
+            </action>
+            <block type="dpi/productInfo" name="dpi.productInfo">
+                <action method="setTemplate" ifconfig="dpi/general/product_list">
+                    <template>dpi/list.phtml</template>
+                </action>
+            </block>
+        </reference>
+    </catalogsearch_advanced_index>
+
+    <catalogsearch_result_index>
+        <reference name="head">
+            <action method="addJs" ifconfig="dpi/general/enabled"><script>prototype/window.js</script></action>
+            <action method="addItem" ifconfig="dpi/general/enabled"><type>js_css</type><name>prototype/windows/themes/default.css</name></action>
+            <action method="addCss" ifconfig="dpi/general/enabled"><name>lib/prototype/windows/themes/magento.css</name></action>
+            <action method="addJs" ifconfig="dpi/general/enabled"><script>dpi/list.js</script></action>
+            <action method="addCss" ifconfig="dpi/general/enabled"><name>css/dpi/style.css</name></action>
+        </reference>
+        <reference name="search_result_list">
+            <action method="setTemplate" ifconfig="dpi/general/template_override"><template>dpi/catalog/product/list.phtml</template></action>
+            <block type="dpi/productInfo" name="dpi.productInfo">
+                <action method="setTemplate" ifconfig="dpi/general/product_list"><template>dpi/list.phtml</template></action>
+            </block>
+        </reference>
+    </catalogsearch_result_index>
+
+    <catalogsearch_advanced_result>
+        <reference name="head">
+            <action method="addJs" ifconfig="dpi/general/enabled"><script>prototype/window.js</script></action>
+            <action method="addItem" ifconfig="dpi/general/enabled"><type>js_css</type><name>prototype/windows/themes/default.css</name></action>
+            <action method="addCss" ifconfig="dpi/general/enabled"><name>lib/prototype/windows/themes/magento.css</name></action>
+            <action method="addJs" ifconfig="dpi/general/enabled"><script>dpi/list.js</script></action>
+            <action method="addCss" ifconfig="dpi/general/enabled"><name>css/dpi/style.css</name></action>
+        </reference>
+        <reference name="search_result_list">
+            <action method="setTemplate" ifconfig="dpi/general/template_override"><template>dpi/catalog/product/list.phtml</template></action>
+            <block type="dpi/productInfo" name="dpi.productInfo">
+                <action method="setTemplate" ifconfig="dpi/general/product_list"><template>dpi/list.phtml</template></action>
+            </block>
+        </reference>
+    </catalogsearch_advanced_result>
+
+    <tag_product_list>
+        <reference name="head">
+            <action method="addJs" ifconfig="dpi/general/enabled"><script>prototype/window.js</script></action>
+            <action method="addItem" ifconfig="dpi/general/enabled"><type>js_css</type><name>prototype/windows/themes/default.css</name></action>
+            <action method="addCss" ifconfig="dpi/general/enabled"><name>lib/prototype/windows/themes/magento.css</name></action>
+            <action method="addJs" ifconfig="dpi/general/enabled"><script>dpi/list.js</script></action>
+            <action method="addCss" ifconfig="dpi/general/enabled"><name>css/dpi/style.css</name>  </action>
+        </reference>
+        <reference name="search_result_list">
+            <action method="setTemplate" ifconfig="dpi/general/template_override"><template>dpi/catalog/product/list.phtml</template></action>
+            <block type="dpi/productInfo" name="dpi.productInfo">
+                <action method="setTemplate" ifconfig="dpi/general/product_list"><template>dpi/list.phtml</template></action>
+            </block>
+        </reference>
+    </tag_product_list>
+</layout>

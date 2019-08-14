@@ -1,0 +1,20 @@
+<?php if (($attributes = $this->getAttributesList()) && $this->helper('dpi')->getStoreConfig(DV_DPI_Helper_Data::XML_PATH_ENABLED)):?>
+<div class="box-collateral box-attribute">
+    <button id='page' class="button <?php if($this->helper('dpi')->getStoreConfig(DV_DPI_Helper_Data::XML_PATH_USE_MODAL)): echo 'dpi-modal'; else: echo 'dpi-toggle'; endif; ?>"  title="<?php echo $this->__("Detailed Info"); ?>">
+        <span><span><?php echo $this->__("Detailed Info"); ?></span></span>
+    </button>
+</div>
+    <div id="product-page" class="dpi-attributes" style="display:none;">
+        <table class="data-table">
+            <?php $iterator = 0; ?>
+            <?php foreach ($attributes as $label => $html): ?>
+                <?php if(!is_array($html)): ?>
+                    <tr <?php if($iterator % 2 == 0): echo 'class="odd"'; else: echo 'class="even"'; endif; $iterator++;?>>
+                        <th class="label"><?php echo $label; ?></th>
+                        <td class="data"><?php echo nl2br($html); ?></td>
+                    </tr>
+                <?php endif;?>
+            <?php endforeach; ?>
+        </table>
+    </div>
+<?php endif; ?>

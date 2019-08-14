@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <dv module="dpi" translate="label">
+            <label>Mage Workshop</label>
+            <sort_order>200</sort_order>
+        </dv>
+    </tabs>
+    <sections>
+        <dpi module="dpi" translate="label">
+            <label>Detailed Product Info</label>
+            <sort_order>300</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <tab>dv</tab>
+            <groups>
+                <general translate="label">
+                    <label>Settings</label>
+                    <sort_order>300</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </enabled>
+                        <product_page translate="label comment">
+                            <label>Display on Product Page</label>
+                            <comment>Display selected attributes on Product Page</comment>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </product_page>
+                        <use_modal translate="label comment">
+                            <label>Use Modal Window</label>
+                            <comment>If "Yes" - modal dialog is used to display attributes, otherwise attributes will be displayed as plain HTML</comment>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </use_modal>
+                        <product_list translate="label comment">
+                            <label>Display in Product Lists</label>
+                            <comment>Display selected attributes in product lists (category, search, tagged products)</comment>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <backend_model>DV_DPI_Model_Adminhtml_SaveConfig</backend_model>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </product_list>
+                        <template_override translate="label">
+                            <label>Allow Product List Template Override</label>
+                            <depends><product_list>1</product_list></depends>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </template_override>
+                        <use_ajax translate="label">
+                            <label>Use AJAX on Product List</label>
+                            <depends><product_list>1</product_list></depends>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </use_ajax>
+                    </fields>
+                </general>
+            </groups>
+        </dpi>
+    </sections>
+</config>

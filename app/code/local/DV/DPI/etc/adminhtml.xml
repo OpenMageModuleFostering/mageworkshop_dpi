@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <catalog>
+            <children>
+                <attributes>
+                    <children>
+                        <dpi translate="title" module="dpi">
+                            <title>Detailed Product Info</title>
+                            <sort_order>107</sort_order>
+                            <action>dpi/settings</action>
+                        </dpi>
+                    </children>
+                </attributes>
+            </children>
+        </catalog>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <catalog>
+                        <children>
+                            <attributes>
+                                <children>
+                                    <dpi translate="title" module="dpi">
+                                        <title>DPI</title>
+                                    </dpi>
+                                </children>
+                            </attributes>
+                        </children>
+                    </catalog>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <dpi translate="title" module="dpi">
+                                        <title>Detailed Product Info</title>
+                                        <sort_order>100</sort_order>
+                                    </dpi>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

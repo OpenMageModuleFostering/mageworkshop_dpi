@@ -1,0 +1,19 @@
+<?php $productId = str_replace('/', '', $this->getRequest()->getParam('id')); ?>
+<?php $storeId = str_replace('/', '', $this->getRequest()->getParam('store')); ?>
+<?php if(($attributes = $this->getAttributesList($productId, $storeId)) && $this->helper('dpi')->getStoreConfig(DV_DPI_Helper_Data::XML_PATH_ENABLED)):?>
+<ul class="attr-wrapper">
+    <li id="product-attr-<?php echo $productId; ?>" class="attr-table" style="display: none; ">
+        <table class="data-table">
+            <?php $iterator = 0; ?>
+            <?php foreach ($attributes as $label => $html): ?>
+                <?php if(!is_array($html)): ?>
+                    <tr <?php if($iterator % 2 == 0): echo 'class="odd"'; else: echo 'class="even"'; endif; $iterator++;?>>
+                        <th class="label"><?php echo $label; ?></th>
+                        <td class="data"><?php echo nl2br($html, true); ?></td>
+                    </tr>
+                <?php endif;?>
+            <?php endforeach; ?>
+        </table>
+    </li>
+</ul>
+<?php endif;?>
