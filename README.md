@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
  This extension displays attribute values of the product on Product Page and various product lists (Category Page, Tagged Products, Search and Advanced search).
